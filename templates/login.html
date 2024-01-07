@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+{% block body %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+</head>
+
+<body>
+
+    <div align="center">
+        <h2>Login</h2>
+        <form action="checklog" method="post">
+
+                <label for="username">Username:</label>
+           <input type="text" id="username" name="username" required>
+           <br>
+            <label for="password">Password:</label>
+           <input type="password" id="password" name="password" required>
+          <br>
+
+            <label >
+                <input type="checkbox" name="resetPassword"> Reset Password
+            </label>
+
+                <br>
+            <div align="center">
+            <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock %}
+</html>
