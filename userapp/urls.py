@@ -16,5 +16,12 @@ urlpatterns = [
     path('regf/',reg,name='register'),
     path('check/',regfun,name='check'),
     path('logins/',login,name='logins'),
-    path('checklogins',logins,name='checklog')
+    path('checklogins/',logins,name='checklog'),
+    path('piechart/', pie_chart,name='piechart'),
+    path('pie/',pie,name='pie'),
+    path('cars',cars,name='cars'),
+    path('weather/',weather,name='weather'),
+    path('weather1/',weatherboarding,name='weather1'),
+    path('feedback/',feedback,name='feedback'),
+    path('feeddata/',feeddata,name='feeddata')
 ]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+<form class="form-horizontal" action="{% url 'feeddata' %}" method="POST">
+    {% csrf_token %}
+  <fieldset>
+          {% csrf_token %}
+<h1>Feed Back Form</h1>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="name">Name</label>
+      <div class="controls">
+        <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+<br>
+      <br>
+
+    <div class="control-group">
+      <!-- Comments-->
+      <label class="control-label" for="message">Comments</label>
+      <div class="controls">
+        <textarea id="message" name="message" required></textarea>
+      </div>
+    </div>
+<br>
+
+
+
+<br>
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success" type="submit">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+  </div>
+</div>
+</div>
+<br><br>
+
+{% endblock %}
+</body>
+</html>
